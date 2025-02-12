@@ -1,0 +1,59 @@
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<body>
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(assets/sagem.png);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a>Acceuil</a>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion Traces</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="gestion/upload">Telecharger Fichier Excel</a>
+                            </li>
+                            <li>
+                                <a href="gestion/traces">Consulter Traces</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li *ngIf="isAdmin">
+                        <a href="gestion/users">Gestion Utilisateurs</a>
+                    </li>
+                    <li *ngIf="isAdmin" >
+                        <a href="gestion/logs">Logs</a>
+                    </li>
+                    <li >
+                        <a href="gestion/user-profile">User Profile</a>
+                    </li>
+                </ul>
+
+                <button (click)="logout()" class="btn btn-light">Logout</button>
+
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+            <nav class="navbar navbar-light bg-light shadow">
+                <div class="container-fluid">
+                    <h1 class="text-dark">Bonjour {{name}} !  </h1>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"904e646a59950e23","serverTiming":{"name":{"cfExtPri":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.1.0","token":"cd0b4b3a733644fc843ef0b185f98241"}' crossorigin="anonymous"></script>
+</body>

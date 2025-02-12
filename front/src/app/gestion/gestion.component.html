@@ -1,0 +1,49 @@
+<div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+        <div class="p-4 pt-5">
+          <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(assets/sagem.png);"></a>
+    <ul class="list-unstyled components mb-5">
+      
+      <li>
+          <a href="acceuil">Acceuil</a>
+      </li>
+      <li>
+      <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Gestion Traces</a>
+      <ul class="collapse list-unstyled" id="pageSubmenu">
+        <li>
+            <a routerLink="upload">Telecharger Fichier Excel</a>
+        </li>
+        <li>
+            <a  routerLink="traces">Consulter Traces</a>
+        </li>
+      </ul>
+      </li>
+      <li *ngIf="isAdmin">
+      <a routerLink="users">Gestion Utilisateurs</a>
+      </li>
+      <li *ngIf="isAdmin">
+        <a routerLink="logs">Logs</a>
+        </li>
+      <li>
+        <a routerLink="user-profile">User profile</a>
+    </li>
+    </ul>
+    
+    
+
+    <div class="footer">
+      <button (click)="logout()" class="btn btn-light">Logout</button>
+    </div>
+
+  </div>
+</nav>
+
+<div id="content" class="p-4 p-md-5">
+
+
+
+
+
+<router-outlet></router-outlet>
+</div>
+</div>

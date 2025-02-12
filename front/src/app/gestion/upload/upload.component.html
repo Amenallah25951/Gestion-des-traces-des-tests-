@@ -1,0 +1,14 @@
+<body>
+    <div class="upload-container">
+        <h2>Upload Excel File</h2>
+        <form id="upload-form" enctype="multipart/form-data">
+            <div class="file-input-container">
+                <label for="file-upload" class="file-label">Choose Excel File</label>
+                <input type="file" id="file-upload" name="file" accept=".xls, .xlsx"  (change)="onFileSelected($event)" />
+            </div>
+            <button type="button" class="upload-btn" (click)="onUpload()">Upload</button>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+
+</body>
